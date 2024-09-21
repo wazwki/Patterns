@@ -7,6 +7,15 @@ type Observer interface {
 	Update(stockPrice float64)
 }
 
+// Investor - конкретная реализация наблюдателя (инвестор)
+type Investor struct {
+	name string
+}
+
+func (i *Investor) Update(stockPrice float64) {
+	fmt.Printf("Investor %s has been notified of new stock price: %.2f\n", i.name, stockPrice)
+}
+
 // StockSubject - интерфейс субъекта (объект, за которым наблюдают)
 type StockSubject interface {
 	Register(observer Observer)
@@ -43,15 +52,6 @@ func (s *Stock) SetPrice(price float64) {
 	fmt.Printf("Setting stock price to %.2f\n", price)
 	s.stockPrice = price
 	s.Notify()
-}
-
-// Investor - конкретная реализация наблюдателя (инвестор)
-type Investor struct {
-	name string
-}
-
-func (i *Investor) Update(stockPrice float64) {
-	fmt.Printf("Investor %s has been notified of new stock price: %.2f\n", i.name, stockPrice)
 }
 
 func main() {
