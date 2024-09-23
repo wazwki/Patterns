@@ -1,253 +1,253 @@
 # Golang patterns implementation
 
-## **Порождающие паттерны** (Creational Patterns)
-Эти паттерны помогают эффективно создавать объекты, управляя сложностью их создания.
+## **Creational Patterns**
+These patterns help to efficiently create objects by managing the complexity of object creation.
 
 ---
 
-### 1. **Singleton (Одиночка)** - Порождающий паттерн
-**Назначение:** Обеспечивает существование только одного экземпляра класса и предоставляет глобальный доступ к нему.
+### 1. **Singleton** - Creational Pattern
+**Purpose:** Ensures that a class has only one instance and provides global access to it.
 
-**Использование:**
-- Для управления доступом к единственному экземпляру (например, логирование, подключения к БД, конфигурации).
-
----
-
-### 2. **Factory Method (Фабричный метод)** - Порождающий паттерн
-**Назначение:** Определяет интерфейс для создания объекта, но делегирует создание подклассам.
-
-**Использование:**
-- Когда нужно инкапсулировать процесс создания объектов, не привязываясь к конкретным классам.
+**Usage:**
+- To control access to a single instance (e.g., logging, database connections, configurations).
 
 ---
 
-### 3. **Abstract Factory (Абстрактная фабрика)** - Порождающий паттерн
-**Назначение:** Предоставляет интерфейс для создания семейств взаимосвязанных объектов, не указывая на их конкретные классы.
+### 2. **Factory Method** - Creational Pattern
+**Purpose:** Defines an interface for creating an object but allows subclasses to alter the type of objects that will be created.
 
-**Использование:**
-- Для создания объектов, которые должны работать вместе (например, UI компоненты для разных платформ).
-
----
-
-### 4. **Builder (Строитель)** - Порождающий паттерн
-**Назначение:** Позволяет пошагово создавать сложные объекты.
-
-**Использование:**
-- Для построения объектов с различными конфигурациями (например, построение сложных продуктов или объектов с многочисленными параметрами).
+**Usage:**
+- When you need to encapsulate the process of object creation without depending on specific classes.
 
 ---
 
-### 5. **Prototype (Прототип)** - Порождающий паттерн
-**Назначение:** Создает объекты путем копирования существующего объекта (прототипа).
+### 3. **Abstract Factory** - Creational Pattern
+**Purpose:** Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-**Использование:**
-- Когда создание объекта дорого или сложно, и проще скопировать существующий.
-
----
-
-## **Структурные паттерны** (Structural Patterns)
-Эти паттерны помогают организовывать отношения между объектами, чтобы добиться гибкости и расширяемости.
+**Usage:**
+- To create objects that need to work together (e.g., UI components for different platforms).
 
 ---
 
-### 6. **Adapter (Адаптер)** - Структурный паттерн
-**Назначение:** Позволяет объектам с несовместимыми интерфейсами взаимодействовать друг с другом.
+### 4. **Builder** - Creational Pattern
+**Purpose:** Allows step-by-step creation of complex objects.
 
-**Использование:**
-- Когда нужно использовать объект с неподходящим интерфейсом.
-
----
-
-### 7. **Decorator (Декоратор)** - Структурный паттерн
-**Назначение:** Динамически добавляет новые обязанности объекту, не изменяя его структуры.
-
-**Использование:**
-- Для добавления функциональности объекту на лету (например, добавление визуальных эффектов к UI-компонентам).
+**Usage:**
+- For constructing objects with different configurations (e.g., building complex products or objects with many parameters).
 
 ---
 
-### 8. **Facade (Фасад)** - Структурный паттерн
-**Назначение:** Предоставляет простой интерфейс для сложной системы.
+### 5. **Prototype** - Creational Pattern
+**Purpose:** Creates objects by copying an existing object (prototype).
 
-**Использование:**
-- Когда нужно упростить взаимодействие с несколькими подсистемами или библиотеками.
-
----
-
-### 9. **Composite (Компоновщик)** - Структурный паттерн
-**Назначение:** Позволяет сгруппировать объекты в древовидную структуру и работать с ними как с единым объектом.
-
-**Использование:**
-- Для представления иерархий объектов (например, структура файловой системы).
+**Usage:**
+- When creating an object is expensive or complicated, and it's easier to clone an existing one.
 
 ---
 
-### 10. **Proxy (Заместитель)** - Структурный паттерн
-**Назначение:** Предоставляет замену или суррогат для другого объекта, чтобы контролировать доступ к нему.
-
-**Использование:**
-- Для контроля доступа, кэширования или ленивой инициализации объектов.
+## **Structural Patterns**
+These patterns help organize relationships between objects to achieve flexibility and extensibility.
 
 ---
 
-### 11. **Bridge (Мост)** - Структурный паттерн
-**Назначение:** Отделяет абстракцию от ее реализации, позволяя им развиваться независимо.
+### 6. **Adapter** - Structural Pattern
+**Purpose:** Allows objects with incompatible interfaces to work together.
 
-**Использование:**
-- Когда требуется разделить реализацию и абстракцию для их независимого изменения.
-
----
-
-### 12. **Flyweight (Легковес)** - Структурный паттерн
-**Назначение:** Уменьшает количество создаваемых объектов, делая их повторно используемыми.
-
-**Использование:**
-- Когда нужно управлять большим количеством мелких объектов (например, символы в текстовом редакторе).
+**Usage:**
+- When you need to use an object with an incompatible interface.
 
 ---
 
-## **Поведенческие паттерны** (Behavioral Patterns)
-Эти паттерны помогают организовать эффективное взаимодействие между объектами, обеспечивая гибкость и удобство их совместной работы.
+### 7. **Decorator** - Structural Pattern
+**Purpose:** Dynamically adds new responsibilities to an object without changing its structure.
+
+**Usage:**
+- To add functionality to an object on the fly (e.g., adding visual effects to UI components).
 
 ---
 
-### 13. **Strategy (Стратегия)** - Поведенческий паттерн
-**Назначение:** Инкапсулирует семейство алгоритмов, делая их взаимозаменяемыми.
+### 8. **Facade** - Structural Pattern
+**Purpose:** Provides a simple interface to a complex system.
 
-**Использование:**
-- Когда нужно выбирать между разными вариантами поведения в зависимости от условий.
-
----
-
-### 14. **Observer (Наблюдатель)** - Поведенческий паттерн
-**Назначение:** Определяет зависимость "один ко многим", при которой изменение состояния одного объекта оповещает все зависимые объекты.
-
-**Использование:**
-- Для реализации механизма подписки на события (например, новостные рассылки).
+**Usage:**
+- When you need to simplify interaction with multiple subsystems or libraries.
 
 ---
 
-### 15. **Command (Команда)** - Поведенческий паттерн
-**Назначение:** Инкапсулирует запрос в объект, позволяя параметризовать клиентов с различными запросами.
+### 9. **Composite** - Structural Pattern
+**Purpose:** Allows grouping objects into tree structures and working with them as if they were individual objects.
 
-**Использование:**
-- Для обработки операций как объектов (например, системы undo/redo).
-
----
-
-### 16. **State (Состояние)** - Поведенческий паттерн
-**Назначение:** Позволяет объекту изменять свое поведение при изменении внутреннего состояния.
-
-**Использование:**
-- Когда объект должен менять свое поведение в зависимости от внутреннего состояния (например, банкомат или автомат с напитками).
+**Usage:**
+- To represent hierarchies of objects (e.g., file system structure).
 
 ---
 
-### 17. **Template Method (Шаблонный метод)** - Поведенческий паттерн
-**Назначение:** Определяет основу алгоритма в базовом классе и позволяет подклассам переопределять отдельные шаги алгоритма.
+### 10. **Proxy** - Structural Pattern
+**Purpose:** Provides a surrogate or placeholder for another object to control access to it.
 
-**Использование:**
-- Для создания алгоритмов, где определенные шаги могут изменяться в подклассах.
-
----
-
-### 18. **Visitor (Посетитель)** - Поведенческий паттерн
-**Назначение:** Позволяет добавлять новые операции к объектам, не изменяя их классы.
-
-**Использование:**
-- Когда нужно выполнять различные операции над объектами разных классов без изменения их кода.
+**Usage:**
+- To control access, caching, or lazy initialization of objects.
 
 ---
 
-### 19. **Mediator (Посредник)** - Поведенческий паттерн
-**Назначение:** Упрощает взаимодействие между объектами, обеспечивая централизованную коммуникацию через посредника.
+### 11. **Bridge** - Structural Pattern
+**Purpose:** Separates an abstraction from its implementation, allowing them to evolve independently.
 
-**Использование:**
-- Для уменьшения зависимости между объектами и улучшения их взаимодействия через один объект.
-
----
-
-### 20. **Chain of Responsibility (Цепочка обязанностей)** - Поведенческий паттерн
-**Назначение:** Позволяет передавать запрос по цепочке обработчиков, пока один из них не обработает его.
-
-**Использование:**
-- Когда запрос должен обрабатываться несколькими объектами.
+**Usage:**
+- When you need to separate implementation and abstraction for independent modification.
 
 ---
 
-### 21. **Interpreter (Интерпретатор)** - Поведенческий паттерн
-**Назначение:** Определяет грамматику для языка и интерпретирует предложения этого языка.
+### 12. **Flyweight** - Structural Pattern
+**Purpose:** Reduces the number of objects created by reusing existing ones.
 
-**Использование:**
-- Когда нужно интерпретировать и анализировать определенный язык или код.
-
----
-
-### 22. **Memento (Хранитель)** - Поведенческий паттерн
-**Назначение:** Позволяет сохранять и восстанавливать состояние объекта без нарушения его инкапсуляции.
-
-**Использование:**
-- Когда необходимо сохранять состояние объекта для последующего восстановления (например, системы undo/redo).
+**Usage:**
+- When you need to manage many small objects (e.g., characters in a text editor).
 
 ---
 
-## **Паттерны параллелизма** (Concurrency Patterns)
-Эти паттерны помогают организации взаимодействия между горутинами и эффективному выполнению параллельных задач.
+## **Behavioral Patterns**
+These patterns help organize effective communication between objects, ensuring flexibility and ease of collaboration.
 
 ---
 
-### 23. **Worker Pool (Пул воркеров)**
-**Назначение:** Организует пул горутин (воркеров), которые обрабатывают задачи параллельно.
+### 13. **Strategy** - Behavioral Pattern
+**Purpose:** Encapsulates a family of algorithms, making them interchangeable.
 
-**Использование:**
-- Когда необходимо распределить множество независимых задач между ограниченным числом воркеров для управления ресурсами.
+**Usage:**
+- When you need to choose between different behavior options depending on conditions.
+
+---
+
+### 14. **Observer** - Behavioral Pattern
+**Purpose:** Defines a one-to-many dependency, where the state change of one object notifies all dependent objects.
+
+**Usage:**
+- To implement event subscription mechanisms (e.g., newsletters).
+
+---
+
+### 15. **Command** - Behavioral Pattern
+**Purpose:** Encapsulates a request as an object, allowing parameterization of clients with different requests.
+
+**Usage:**
+- To handle operations as objects (e.g., undo/redo systems).
+
+---
+
+### 16. **State** - Behavioral Pattern
+**Purpose:** Allows an object to change its behavior when its internal state changes.
+
+**Usage:**
+- When an object needs to alter its behavior based on internal state (e.g., ATM or vending machine).
+
+---
+
+### 17. **Template Method** - Behavioral Pattern
+**Purpose:** Defines the skeleton of an algorithm in the base class and allows subclasses to override specific steps.
+
+**Usage:**
+- To create algorithms where certain steps may vary in subclasses.
+
+---
+
+### 18. **Visitor** - Behavioral Pattern
+**Purpose:** Allows adding new operations to objects without changing their classes.
+
+**Usage:**
+- When you need to perform various operations on objects of different classes without altering their code.
+
+---
+
+### 19. **Mediator** - Behavioral Pattern
+**Purpose:** Simplifies communication between objects by ensuring centralized interaction through a mediator.
+
+**Usage:**
+- To reduce dependencies between objects and improve interaction through a single object.
+
+---
+
+### 20. **Chain of Responsibility** - Behavioral Pattern
+**Purpose:** Allows passing a request along a chain of handlers until one of them processes it.
+
+**Usage:**
+- When a request needs to be processed by several objects.
+
+---
+
+### 21. **Interpreter** - Behavioral Pattern
+**Purpose:** Defines a grammar for a language and interprets expressions in that language.
+
+**Usage:**
+- When you need to interpret and analyze a specific language or code.
+
+---
+
+### 22. **Memento** - Behavioral Pattern
+**Purpose:** Allows saving and restoring the state of an object without violating its encapsulation.
+
+**Usage:**
+- When it’s necessary to save the state of an object for later restoration (e.g., undo/redo systems).
+
+---
+
+## **Concurrency Patterns**
+These patterns help organize interaction between goroutines and ensure efficient execution of parallel tasks.
+
+---
+
+### 23. **Worker Pool**
+**Purpose:** Organizes a pool of goroutines (workers) to process tasks in parallel.
+
+**Usage:**
+- When you need to distribute many independent tasks among a limited number of workers to manage resources.
 
 ---
 
 ### 24. **Fan-In / Fan-Out**
-**Назначение:** Распараллеливает выполнение нескольких задач (Fan-Out) и объединяет результаты из нескольких горутин в одну (Fan-In).
+**Purpose:** Executes multiple tasks in parallel (Fan-Out) and collects results from several goroutines into one (Fan-In).
 
-**Использование:**
-- Когда необходимо параллельно выполнить несколько операций и собрать их результаты в одном месте.
-
----
-
-### 25. **Pipeline (Конвейер)**
-**Назначение:** Разделяет задачу на несколько этапов, где каждый этап выполняется в отдельной горутине и передает результат следующему этапу через канал.
-
-**Использование:**
-- Когда задача может быть разбита на несколько последовательных шагов, каждый из которых может выполняться независимо.
+**Usage:**
+- When you need to perform several operations in parallel and collect their results in one place.
 
 ---
 
-### 26. **Select Statement (Выборка)**
-**Назначение:** Позволяет управлять несколькими каналами, ожидая данные от любого из них.
+### 25. **Pipeline**
+**Purpose:** Breaks a task into several stages, where each stage is executed in a separate goroutine and passes the result to the next stage via channels.
 
-**Использование:**
-- Когда нужно реагировать на события или данные, приходящие из разных источников (каналов).
-
----
-
-### 27. **Cancellation (Отмена)**
-**Назначение:** Позволяет остановить выполнение горутин, которые больше не нужны, через механизм отмены контекста (`context.Context`).
-
-**Использование:**
-- Когда нужно завершить работу нескольких горутин в случае ошибки или когда задача больше не требуется.
+**Usage:**
+- When a task can be divided into several sequential steps, each of which can be executed independently.
 
 ---
 
-### 28. **Timeouts (Тайм-ауты)**
-**Назначение:** Позволяет задать максимальное время ожидания ответа от горутины или внешнего ресурса.
+### 26. **Select Statement**
+**Purpose:** Allows managing multiple channels, waiting for data from any of them.
 
-**Использование:**
-- Когда важно ограничить время выполнения задачи и завершить ее в случае превышения допустимого времени.
+**Usage:**
+- When you need to react to events or data coming from different sources (channels).
 
 ---
 
-### 29. **Semaphore (Семафор)**
-**Назначение:** Ограничивает количество одновременно выполняющихся горутин с помощью счетчика (`semaphore`) для управления доступом к общим ресурсам.
+### 27. **Cancellation**
+**Purpose:** Allows stopping the execution of goroutines that are no longer needed using a cancellation mechanism (`context.Context`).
 
-**Использование:**
-- Когда нужно контролировать количество одновременных операций, например, для ограничения нагрузки на ресурсы.
+**Usage:**
+- When you need to terminate several goroutines in case of an error or when the task is no longer required.
+
+---
+
+### 28. **Timeouts**
+**Purpose:** Allows setting a maximum wait time for a goroutine or an external resource response.
+
+**Usage:**
+- When it’s important to limit the time for task execution and terminate it in case of exceeding the allowed time.
+
+---
+
+### 29. **Semaphore**
+**Purpose:** Limits the number of goroutines running simultaneously using a counter (`semaphore`) to manage access to shared resources.
+
+**Usage:**
+- When you need to control the number of concurrent operations, such as limiting load on resources.
 
 ---
